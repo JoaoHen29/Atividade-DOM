@@ -1,0 +1,135 @@
+/* ---------- Tema: variáveis por modo ---------- */
+body[data-theme="light"] {
+  --bg: #FDF6E9;
+  --text: #232323;
+  --card-bg: #FFFFFF;
+  --border: #232323;
+  --accent: #C9A227;
+  --accent-text: #232323;
+  --muted: #6B6558;
+}
+
+body[data-theme="dark"] {
+  --bg: #0E1330;
+  --text: #E8E6F0;
+  --card-bg: #171C41;
+  --border: #E8E6F0;
+  --accent: #A9A0D6;
+  --accent-text: #0E1330;
+  --muted: #A7A3C4;
+}
+
+/* ---------- Base ---------- */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: 'Work Sans', sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  padding: 24px;
+}
+
+h1 {
+  font-family: 'Fraunces', serif;
+  font-size: 2rem;
+  margin: 0 0 8px;
+}
+
+/* ---------- Botão de tema ---------- */
+.theme-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--text);
+  font-family: 'Work Sans', sans-serif;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.theme-toggle:hover {
+  background-color: var(--card-bg);
+}
+
+/* ---------- Card central ---------- */
+.card {
+  max-width: 460px;
+  width: 100%;
+  background-color: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 40px 36px;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.eyebrow {
+  margin: 0 0 12px;
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+.subtitle {
+  margin: 0 0 28px;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+/* ---------- Formulário ---------- */
+.form-row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+#name-input {
+  flex: 1;
+  padding: 12px 14px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: transparent;
+  color: var(--text);
+  font-family: 'Work Sans', sans-serif;
+  font-size: 1rem;
+}
+
+#name-input:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+#submit-btn {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  background-color: var(--accent);
+  color: var(--accent-text);
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+#submit-btn:hover {
+  opacity: 0.9;
+}
+
+/* ---------- Mensagem de saudação ---------- */
+.greeting {
+  min-height: 24px;
+  font-size: 1.05rem;
+  margin: 0;
+}

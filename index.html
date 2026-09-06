@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dia ou Noite — Página Interativa</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body data-theme="light">
+
+  <button id="theme-toggle" class="theme-toggle" aria-label="Alternar entre modo claro e escuro">
+    <span id="theme-icon">☀</span>
+    <span id="theme-label">Modo dia</span>
+  </button>
+
+  <main class="card">
+    <p class="eyebrow">Página interativa com DOM</p>
+    <h1>Como podemos te chamar?</h1>
+    <p class="subtitle">Digite seu nome e veja a mensagem aparecer na tela.</p>
+
+    <div class="form-row">
+      <input
+        type="text"
+        id="name-input"
+        placeholder="Digite seu nome"
+        autocomplete="off"
+      />
+      <button id="submit-btn">Enviar</button>
+    </div>
+
+    <p id="greeting-message" class="greeting"></p>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
